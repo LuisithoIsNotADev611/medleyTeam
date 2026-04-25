@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medley TEAM</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --accent: #3b82f6;
+        --accent-2: #a855f7;
+      }
+
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #030303;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+
+      .font-title {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      /* Efecto de malla de fondo */
+      .grid-bg {
+        background-image: linear-gradient(
+            rgba(59, 130, 246, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      /* Tarjetas de Proyectos */
+      .project-card {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+        border-color: var(--accent);
+        box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+        background: rgba(59, 130, 246, 0.05);
+      }
+
+      .glow-button {
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-bg"></div>
+
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+      <h1 class="font-title text-2xl font-bold tracking-tighter text-blue-500">
+        MEDLEY<span class="text-white">TEAM</span>
+      </h1>
+      <div class="space-x-6 text-sm text-slate-400">
+        <a
+          href="https://github.com/"
+          target="_blank"
+          class="hover:text-white transition"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="#" class="hover:text-white transition">Acerca de</a>
+      </div>
+    </nav>
+
+    <header class="py-20 text-center px-6" data-aos="zoom-in">
+      <h2 class="font-title text-5xl md:text-8xl font-bold mb-6 tracking-tight">
+        Explora el
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+          >Conocimiento</span
+        >
+      </h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-lg md:text-xl">
+        Repositorio central de Ingeniería Informática. Una mezcla de proyectos,
+        reportes de física y desarrollos tecnológicos.
+      </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-40">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="project-card p-8 rounded-[2rem]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400"
+          >
+            <i class="fas fa-bolt text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 font-title">Electromagnetismo</h3>
+          <p class="text-slate-400 text-sm mb-6 leading-relaxed">
+            Reporte detallado sobre Campo Eléctrico, Potencial y Diferencia de
+            Potencial. Incluye simulaciones y datos experimentales.
+          </p>
+          <a
+            href="electromagnetismo.html"
+            class="inline-block px-6 py-2 bg-blue-600 rounded-full text-sm font-bold glow-button hover:bg-blue-500 transition"
+            >Ver Wiki</a
+          >
+        </div>
+
+        <div
+          class="project-card p-8 rounded-[2rem] border-dashed border-slate-800"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div
+            class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-purple-400"
+          >
+            <i class="fas fa-code text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">
+            Algoritmos
+          </h3>
+          <p class="text-slate-600 text-sm mb-6">
+            Sección reservada para proyectos de estructuras de datos y lógica de
+            programación.
+          </p>
+          <span
+            class="text-xs text-slate-700 font-bold tracking-widest uppercase"
+            >Próximamente</span
+          >
+        </div>
+
+        <div
+          class="project-card p-8 rounded-[2rem] border-dashed border-slate-800"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div
+            class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-6 text-pink-400"
+          >
+            <i class="fas fa-microchip text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">
+            Hardware
+          </h3>
+          <p class="text-slate-600 text-sm mb-6">
+            Documentación sobre arquitectura de computadoras y sistemas
+            embebidos.
+          </p>
+          <span
+            class="text-xs text-slate-700 font-bold tracking-widest uppercase"
+            >Próximamente</span
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="py-10 border-t border-white/5 text-center text-slate-600 text-xs"
+    >
+      <p>
+        DESARROLLADO POR EQUIPO 2F |
+        <span class="text-blue-500">MEDLEY TEAM</span>
+      </p>
+      <p class="mt-2 tracking-widest">© 2026 - INGENIERÍA EN INFORMÁTICA</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000 });
+    </script>
+  </body>
+</html>
