@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electromagnetismo | Medley team</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #050505;
+        color: #ffffff;
+        scroll-behavior: smooth;
+      }
+
+      /* --- Estética Glassmorphism --- */
+      .glass {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+      }
+
+      /* --- Barra Lateral Estilo Wiki --- */
+      .wiki-sidebar {
+        background: rgba(10, 10, 10, 0.8);
+        backdrop-filter: blur(20px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* --- Contenedor de Texto Largo --- */
+      .wiki-content {
+        line-height: 1.8;
+        color: #cbd5e1; /* Color suave para lectura larga */
+      }
+
+      .highlight-text {
+        color: #3b82f6;
+        font-weight: bold;
+      }
+
+      /* --- Contenedor de Video Responsivo --- */
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Scrollbar estética */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body class="bg-[#050505]">
+    <aside
+      class="wiki-sidebar fixed left-0 top-0 h-screen w-64 hidden lg:flex flex-col p-6 z-50"
+    >
+      <div class="mb-10">
+        <h2
+          class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
+        >
+          MEDLEY TEAM
+        </h2>
+        <p class="text-[10px] text-slate-500 tracking-widest">
+          ING. INFORMÁTICA - 2F
+        </p>
+      </div>
+
+      <nav class="space-y-4 text-sm">
+        <p class="text-slate-500 text-xs uppercase font-bold">Contenido</p>
+        <a
+          href="#inicio"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+          ><i class="fas fa-home w-4"></i> Inicio</a
+        >
+        <a
+          href="#campo"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+          ><i class="fas fa-bolt w-4"></i> Campo Eléctrico</a
+        >
+        <a
+          href="#potencial"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+          ><i class="fas fa-wave-square w-4"></i> Potencial Eléctrico</a
+        >
+        <a
+          href="#experimental"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+          ><i class="fas fa-flask w-4"></i> Evidencia Exp.</a
+        >
+
+        <p class="text-slate-500 text-xs uppercase font-bold pt-6">Recursos</p>
+        <a
+          href="#multimedia"
+          class="block hover:text-pink-400 transition flex items-center gap-2"
+          ><i class="fas fa-play-circle w-4"></i> Multimedia</a
+        >
+        <a
+          href="#referencias"
+          class="block hover:text-emerald-400 transition flex items-center gap-2"
+          ><i class="fas fa-link w-4"></i> Hipervínculos</a
+        >
+      </nav>
+    </aside>
+
+    <main class="lg:ml-64 px-6 md:px-12">
+      <section
+        id="inicio"
+        class="min-h-[70vh] flex flex-col justify-center items-start"
+      >
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <span
+            class="px-3 py-1 glass text-xs text-blue-400 mb-4 inline-block tracking-tighter"
+            >REPORTE TÉCNICO - ABRIL 2026</span
+          >
+          <h1 class="text-5xl md:text-7xl font-bold mb-6">
+            Potencial <span class="text-blue-500 italic">Eléctrico</span>
+          </h1>
+          <p class="text-slate-400 text-lg max-w-2xl">
+            Documentación colaborativa sobre la diferencia de potencial y su
+            relación con el campo eléctrico. Proyecto desarrollado para la
+            materia de Electromagnetismo.
+          </p>
+        </div>
+      </section>
+
+      <section id="campo" class="py-20" data-aos="fade-up">
+        <div class="glass p-8 md:p-12 wiki-content">
+          <h2
+            class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3"
+          >
+            <i class="fas fa-microscope text-xl"></i> Fundamentos del Campo
+            Eléctrico
+          </h2>
+          <div class="space-y-6">
+            <p>
+              El <span class="highlight-text">Campo Eléctrico</span> es una
+              forma de describir cómo las
+              <span class="highlight-text">cargas eléctricas</span> ejercen
+              fuerzas a distancia. Tanto la fuerza gravitacional como la fuerza
+              electrostática pueden actuar sin contacto físico directo, es
+              decir, a través del espacio.
+            </p>
+            <p>
+              El concepto de campo fue desarrollado por
+              <span class="highlight-text">Michael Faraday</span> (1791–1867).
+              Según este enfoque, una carga eléctrica genera un campo en el
+              espacio que la rodea. Este campo puede influir sobre otras cargas
+              cercanas. A diferencia de la
+              <span class="highlight-text">Ley de Coulomb</span>, que describe
+              la fuerza entre dos cargas separadas por una distancia, el
+              concepto de campo establece que la fuerza es ejercida por el campo
+              en el punto donde se encuentra la carga.
+            </p>
+            <p>
+              En términos físicos, un campo eléctrico es un
+              <span class="highlight-text">campo vectorial</span> en el que una
+              carga eléctrica dada (q) experimenta una
+              <span class="highlight-text">fuerza eléctrica (F)</span>. Estos
+              campos eléctricos pueden ser resultado de la presencia de cargas
+              eléctricas o de campos magnéticos variables, como demostraron los
+              experimentos de Michael Faraday y
+              <span class="highlight-text">James Clerk Maxwell</span>.
+            </p>
+            <p>
+              Por esta razón, en la física contemporánea, los campos eléctricos
+              se consideran junto con los campos magnéticos para formar
+              <span class="highlight-text">campos electromagnéticos</span>. Así,
+              un campo eléctrico es la región del espacio que ha sido modificada
+              por la presencia de una carga eléctrica.
+            </p>
+            <p>
+              Si esta carga es <span class="highlight-text">positiva</span>,
+              genera líneas de campo eléctrico que se originan en la carga y se
+              extienden
+              <span class="highlight-text">radialmente hacia afuera</span>. Por
+              el contrario, si la carga es
+              <span class="highlight-text">negativa</span>, las líneas de campo
+              terminan en la carga. Si una carga se acerca a una región del
+              espacio donde existe un campo eléctrico, experimentará una fuerza
+              eléctrica con una dirección y un sentido específicos.
+            </p>
+            <h3
+              class="text-lg font-semibold text-blue-300 mt-10 mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-book-open"></i> Definición Básica
+            </h3>
+
+            <div class="space-y-6">
+              <p>
+                El <span class="highlight-text">campo eléctrico</span> \(
+                \vec{E} \) es una cantidad vectorial que existe en todo punto
+                del espacio. En una posición determinada, indica la fuerza que
+                actuaría sobre una
+                <span class="highlight-text"
+                  >carga puntual positiva unitaria</span
+                >
+                si estuviera en esa posición.
+              </p>
+
+              <p>
+                Se relaciona con la fuerza eléctrica que actúa sobre una carga
+                arbitraria \( q \) mediante la expresión:
+              </p>
+
+              <div
+                class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+              >
+                <p class="text-2xl text-blue-200">
+                  $$\vec{E} = \frac{\vec{F}}{q}$$
+                </p>
+              </div>
+
+              <p>
+                Las dimensiones del campo eléctrico en el Sistema Internacional
+                son <span class="highlight-text">newtons/coulomb</span>,
+                expresado como \( \text{N/C} \).
+              </p>
+
+              <p>
+                Podemos expresar la fuerza eléctrica en términos del campo
+                eléctrico de la siguiente forma:
+              </p>
+
+              <div
+                class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+              >
+                <p class="text-2xl text-blue-200">$$\vec{F} = q\vec{E}$$</p>
+              </div>
+
+              <p>
+                Para una <span class="text-blue-300">\( q \) positiva</span>, el
+                vector de campo eléctrico apunta en la misma dirección que el
+                vector de fuerza.
+              </p>
+
+              <p>
+                La ecuación para el campo eléctrico es similar a la
+                <span class="highlight-text">ley de Coulomb</span>. En este
+                modelo, asignamos a una carga \( q \) el papel de
+                <span class="italic text-slate-300">carga de prueba</span>,
+                mientras que las otras cargas \( q_i \) crean el campo que
+                queremos estudiar:
+              </p>
+
+              <div class="space-y-4 my-8">
+                <div
+                  class="bg-slate-800/20 p-4 rounded-lg border-l-4 border-blue-500"
+                >
+                  <p class="text-lg">
+                    $$\text{Ley de Coulomb: } \quad \vec{F} =
+                    \frac{1}{4\pi\epsilon_0} \frac{q \, q_i}{r^2} \hat{r}_i
+                    \quad \text{[N]}$$
+                  </p>
+                </div>
+
+                <div
+                  class="bg-slate-800/20 p-4 rounded-lg border-l-4 border-purple-500"
+                >
+                  <p class="text-lg">
+                    $$\text{Campo eléctrico: } \quad \vec{E} = \frac{\vec{F}}{q}
+                    = \frac{1}{4\pi\epsilon_0} \frac{q_i}{r^2} \hat{r}_i \quad
+                    \text{[N/C]}$$
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Donde \( \hat{r}_i \) son
+                <span class="highlight-text">vectores unitarios</span> que
+                indican la dirección de la recta que une cada carga fuente \(
+                q_i \) con la carga de prueba \( q \).
+              </p>
+            </div>
+            <h3
+              class="text-lg font-semibold text-blue-300 mt-8 mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-bolt"></i> Visualización y Comportamiento
+            </h3>
+            <p>
+              La presencia de
+              <span class="highlight-text">carga eléctrica</span> en una región
+              del espacio modifica las características de dicho espacio,
+              generando un <span class="highlight-text">campo eléctrico</span>.
+              Por lo tanto, podemos considerar un campo eléctrico como una
+              región cuyas propiedades han sido alteradas, de modo que cuando se
+              introduce una nueva carga, experimentará una
+              <span class="highlight-text">fuerza</span>.
+            </p>
+            <p>
+              El campo eléctrico se representa matemáticamente mediante el
+              <span class="highlight-text">vector campo eléctrico</span>,
+              definido como la razón entre la fuerza eléctrica experimentada por
+              una carga de prueba y el valor de dicha carga.
+            </p>
+            <p>
+              La definición más intuitiva se obtiene mediante la
+              <span class="highlight-text">ley de Coulomb</span>, que permite
+              expresar el campo entre distribuciones en reposo. Sin embargo,
+              para cargas en movimiento, se requiere una definición más formal
+              que exige el uso de
+              <span class="highlight-text">cuadrivectores</span> y el principio
+              de <span class="highlight-text">mínima acción</span>.
+            </p>
+            <p>
+              Desde un punto de vista relativista, la definición de campo
+              eléctrico es
+              <span class="highlight-text">relativa y no absoluta</span>. Los
+              observadores en movimiento relativo medirán diferentes "partes
+              eléctricas" del
+              <span class="highlight-text">campo electromagnético</span>, por lo
+              que el valor medido dependerá intrínsecamente del sistema de
+              referencia elegido.
+            </p>
+            <h3
+              class="text-lg font-semibold text-blue-400 mt-8 mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-calculus"></i> Derivación desde la Ley de Coulomb
+            </h3>
+            <p>
+              Partiendo de la
+              <span class="highlight-text">ley de Coulomb</span>, que expresa
+              que la fuerza entre dos cargas en reposo relativo depende del
+              cuadrado de la distancia, matemáticamente se define como:
+            </p>
+            <p class="py-4 text-center text-xl text-blue-200">
+              $$\mathbf{F}_{12} = \frac{1}{4\pi\epsilon_0} \left[ \frac{q_1
+              q_2}{r_{12}^2} \right] \mathbf{\hat{r}}_{12}$$
+            </p>
+            <p>Donde los componentes principales son:</p>
+            <ul class="list-disc list-inside space-y-2 pl-4 text-slate-300">
+              <li>
+                <span class="text-blue-300">\( \epsilon_0 \)</span>:
+                Permitividad eléctrica del vacío (constante del SI).
+              </li>
+              <li>
+                <span class="text-blue-300">\( q_1, q_2 \)</span>: Cargas que
+                interactúan.
+              </li>
+              <li>
+                <span class="text-blue-300">\( r_{12} \)</span>: Distancia entre
+                ambas cargas.
+              </li>
+              <li>
+                <span class="text-blue-300">\( \mathbf{\hat{r}} \)</span>:
+                Vector unitario en la dirección de la fuerza.
+              </li>
+            </ul>
+            <p
+              class="mt-4 italic text-slate-400 border-l-4 border-blue-500 pl-4"
+            >
+              Nota: Si el medio no es el vacío, se debe emplear la permitividad
+              relativa:
+              <span class="text-blue-300"
+                >\( \epsilon = \epsilon_r \epsilon_0 \)</span
+              >.
+            </p>
+            <h3
+              class="text-lg font-semibold text-blue-400 mt-10 mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-bolt"></i> De la Acción a Distancia al Ente
+              Físico
+            </h3>
+            <p>
+              Históricamente, se presuponía la
+              <span class="highlight-text">acción a distancia</span>, donde el
+              efecto de una carga era instantáneo sin importar la separación.
+              Sin embargo, experimentos del siglo XIX demostraron que el campo
+              eléctrico es un
+              <span class="highlight-text">ente físico</span> que se propaga a
+              una velocidad finita: la
+              <span class="highlight-text">velocidad de la luz</span>.
+            </p>
+            <p>
+              Bajo esta perspectiva, el campo eléctrico es una distorsión del
+              <span class="highlight-text">espacio-tiempo</span>. En el caso
+              electrostático, la expresión del campo es:
+            </p>
+            <p class="py-4 text-center text-xl text-blue-200">
+              $$\mathbf{E} = \frac{1}{4\pi\epsilon_0} \frac{q}{r^2}
+              \mathbf{\hat{r}}$$
+            </p>
+            <p>
+              De aquí surge una de las definiciones más fundamentales de la
+              física:
+              <span class="highlight-text text-blue-300"
+                >\( \mathbf{F} = q\mathbf{E} \)</span
+              >.
+            </p>
+            <h3
+              class="text-lg font-semibold text-blue-400 mt-10 mb-4 flex items-center gap-2"
+            >
+              <i class="fas fa-integrals"></i> Distribuciones Continuas
+            </h3>
+            <p>
+              Para sistemas donde la carga no es puntual, sino que se distribuye
+              en un volumen, el campo eléctrico se calcula mediante la siguiente
+              integral:
+            </p>
+            <p class="py-6 text-center text-xl text-blue-200">
+              $$\mathbf{E}(\mathbf{r}) = \frac{1}{4\pi\epsilon_0} \int_V
+              \frac{\rho(\mathbf{r}')}{\|\mathbf{r} - \mathbf{r}'\|^3}
+              (\mathbf{r} - \mathbf{r}') \, d^3r'$$
+            </p>
+            <div class="my-10">
+              <img
+                src="https://www.sciencefacts.net/wp-content/uploads/2021/03/Electric-Field.jpg"
+                class="rounded-2xl border border-white/10 shadow-2xl opacity-80"
+                alt="Líneas de campo"
+              />
+              <p
+                class="text-[10px] text-center mt-3 text-slate-500 tracking-widest"
+              >
+                FIG 1. Fuerzas de las cargas electrónicas
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="multimedia" class="py-20" data-aos="fade-right">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-2 glass p-6">
+            <h3 class="text-xl font-bold mb-4 italic">
+              Demostración Experimental
+            </h3>
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div id="referencias" class="glass p-6 space-y-6">
+            <h3 class="text-xl font-bold mb-4">Recursos Wiki</h3>
+            <div class="space-y-4">
+              <a
+                href="https://phet.colorado.edu/es/simulations/charges-and-fields"
+                target="_blank"
+                class="block p-4 bg-white/5 rounded-xl hover:bg-blue-500/20 transition border border-white/5"
+              >
+                <h4 class="text-blue-400 font-bold text-sm">
+                  Simulador PhET
+                  <i class="fas fa-external-link-alt text-[10px]"></i>
+                </h4>
+                <p class="text-[10px] text-slate-400">
+                  Herramienta para visualizar campos en tiempo real.
+                </p>
+              </a>
+              <a
+                href="#"
+                class="block p-4 bg-white/5 rounded-xl hover:bg-purple-500/20 transition border border-white/5"
+              >
+                <h4 class="text-purple-400 font-bold text-sm">
+                  Formulario PDF
+                  <i class="fas fa-file-download text-[10px]"></i>
+                </h4>
+                <p class="text-[10px] text-slate-400">
+                  Descarga las fórmulas del equipo 2F.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/10 text-center lg:ml-64">
+      <div class="flex justify-center gap-6 mb-6 text-slate-500">
+        <i class="fab fa-github hover:text-white cursor-pointer"></i>
+        <i class="fab fa-google-drive hover:text-white cursor-pointer"></i>
+        <i class="fas fa-graduation-cap hover:text-white cursor-pointer"></i>
+      </div>
+      <p class="text-slate-600 text-[10px] uppercase tracking-[5px]">
+        TecNM - Cintalapa, Chiapas
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: false });
+    </script>
+  </body>
+</html>
