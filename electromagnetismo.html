@@ -172,24 +172,47 @@
 
     <main class="lg:ml-64 px-6 md:px-12">
       <section
-        id="inicio"
-        class="min-h-[70vh] flex flex-col justify-center items-start"
-      >
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <span
-            class="px-3 py-1 glass text-xs text-blue-400 mb-4 inline-block tracking-tighter"
-            >REPORTE TÉCNICO - ABRIL 2026</span
-          >
-          <h1 class="text-5xl md:text-7xl font-bold mb-6">
-            Electro<span class="text-blue-500 italic">magnetismo</span>
-          </h1>
-          <p class="text-slate-400 text-lg max-w-2xl">
-            Documentación colaborativa sobre la diferencia de potencial y su
-            relación con el campo eléctrico. Proyecto desarrollado para la
-            materia de Electromagnetismo.
-          </p>
+      id="inicio"
+      class="relative min-h-[80vh] flex flex-col justify-center items-start px-8 md:px-16 overflow-hidden rounded-3xl my-8"
+    >
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?auto=format&fit=crop&q=80&w=2000" 
+          alt="Fondo Electromagnetismo" 
+          class="w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
+      </div>
+    
+      <div class="relative z-10" data-aos="fade-right" data-aos-duration="1000">
+        <span
+          class="px-3 py-1 glass text-xs text-blue-400 mb-4 inline-block tracking-widest font-bold border border-blue-500/30"
+        >
+          REPORTE TÉCNICO - ABRIL 2026
+        </span>
+        
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-6 leading-tight">
+          Electro<span class="text-blue-500 italic drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">magnetismo</span>
+        </h1>
+        
+        <p class="text-slate-300 text-lg md:text-xl max-w-2xl leading-relaxed">
+          Documento académico que aborda los conceptos de <span class="text-blue-300">campo eléctrico</span>, 
+          <span class="text-blue-300">potencial eléctrico</span> y <span class="text-blue-300">diferencia de potencial</span>, 
+          explorando sus interacciones fundamentales en sistemas estáticos y dinámicos.
+        </p>
+    
+        <div class="mt-10 flex gap-4">
+          <a href="#campo" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full transition-all font-semibold flex items-center gap-2">
+            Empezar lectura <i class="fas fa-arrow-down text-sm"></i>
+          </a>
+          <div class="px-6 py-3 glass rounded-full text-slate-300 text-sm flex items-center">
+            Equipo 2F - ITSC
+          </div>
         </div>
-      </section>
+      </div>
+    
+      <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-[120px] animate-pulse"></div>
+    </section>
 
       <section id="campo" class="py-20" data-aos="fade-up">
         <div class="glass p-8 md:p-12 wiki-content">
@@ -843,6 +866,259 @@
               </li>
             </ul>
           </div>
+          <h3
+            class="text-xl font-bold mt-10 mb-4 text-blue-300 flex items-center gap-2"
+          >
+            <i class="fas fa-bolt"></i> Diferencia de Potencial Eléctrico
+          </h3>
+          <div class="space-y-6">
+            <p>
+              En la <span class="highlight-text">Electricidad práctica</span> es
+              deseable conocer el trabajo necesario para mover cargas entre dos
+              puntos, lo cual conduce al concepto de
+              <span class="highlight-text">diferencia de potencial</span>.
+            </p>
+            <p class="italic text-slate-400 border-l-4 border-blue-500 pl-4">
+              La diferencia de potencial entre dos puntos es el
+              <span class="text-blue-200"
+                >trabajo por unidad de carga positiva</span
+              >
+              que realizan fuerzas eléctricas para mover una pequeña carga de
+              prueba desde el punto de mayor potencial al punto de menor
+              potencial.
+              <span class="text-xs">(Tippens, P. E., 2011:504)</span>.
+            </p>
+            <p>
+              Así, de manera general, el
+              <span class="highlight-text"
+                >trabajo realizado por un campo eléctrico</span
+              >, o trabajo eléctrico, para transportar una carga
+              <span class="italic font-serif">q</span> desde un punto A a un
+              punto B se puede determinar por la fórmula:
+            </p>
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+            >
+              <div class="text-xl md:text-2xl text-blue-200 font-serif italic">
+                W<sub>e</sub> (A → B) = − ( E<sub>pB</sub> − E<sub>pA</sub> ) =
+                E<sub>pA</sub> − E<sub>pB</sub>
+              </div>
+            </div>
+            <p>
+              Si dos puntos de un campo eléctrico poseen distinto potencial
+              eléctrico, entre ambos puntos existe lo que se denomina una
+              <span class="highlight-text"
+                >diferencia de potencial o tensión</span
+              >, ΔV. Este valor se encuentra íntimamente relacionado con el
+              <span class="text-blue-400 font-bold">trabajo eléctrico</span>.
+            </p>
+            <p>
+              Si aplicamos la definición de potencial eléctrico, obtenemos que:
+            </p>
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+            >
+              <div class="text-xl md:text-2xl text-blue-200 font-serif italic">
+                W<sub>e</sub> (A → B) = E<sub>pA</sub> − E<sub>pB</sub> = q ⋅
+                V<sub>A</sub> − q ⋅ V<sub>B</sub> = q ⋅ (V<sub>A</sub> −
+                V<sub>B</sub>)
+              </div>
+            </div>
+            <p>
+              La
+              <span class="highlight-text"
+                >diferencia de potencial eléctrico</span
+              >
+              entre dos puntos A y B de un campo eléctrico es el opuesto del
+              trabajo realizado por el campo eléctrico para trasladar una unidad
+              de carga positiva desde el punto A al B.
+            </p>
+            <div
+              class="bg-slate-800/40 p-8 rounded-xl border border-white/5 my-6 flex justify-center items-center"
+            >
+              <div
+                class="text-2xl text-blue-200 font-serif italic flex items-center gap-2"
+              >
+                ΔV = V<sub>B</sub> − V<sub>A</sub> = −
+                <div class="inline-flex flex-col items-center align-middle">
+                  <span class="border-b border-blue-200 px-4"
+                    >W<sub>e</sub> (A → B)</span
+                  >
+                  <span class="px-4">q</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fenomenos" class="py-20" data-aos="fade-up">
+        <div class="glass p-8 md:p-12 wiki-content">
+          <h2
+            class="text-3xl font-bold mb-8 text-blue-400 flex items-center gap-3"
+          >
+            <i class="fas fa-atom"></i> Fenomenos electrostáticos
+          </h2>
+
+          <div class="flex flex-col lg:flex-row gap-10 items-center">
+            <div class="lg:w-1/2 space-y-6">
+              <p class="text-lg leading-relaxed">
+                Los
+                <span class="highlight-text">fenómenos electrostáticos</span>
+                ocurren cuando un cuerpo gana o pierde electrones, adquiriendo
+                una
+                <span class="text-blue-300 font-semibold"
+                  >carga eléctrica positiva o negativa</span
+                >.
+              </p>
+
+              <p class="text-lg leading-relaxed">
+                Esta acumulación de carga produce
+                <span class="highlight-text text-pink-400"
+                  >fuerzas de atracción o repulsión</span
+                >
+                al interactuar con otros cuerpos cargados. Estos efectos son
+                visibles en muchas situaciones cotidianas y permiten comprender
+                cómo actúan las cargas eléctricas antes de convertirse en
+                corriente eléctrica.
+              </p>
+
+              <div
+                class="bg-blue-500/10 border-l-4 border-blue-500 p-4 rounded-r-lg italic text-slate-300"
+              >
+                "La electrostática es la base para entender el comportamiento de
+                la materia a nivel atómico."
+              </div>
+
+              <h3 class="text-xl font-bold mt-10 mb-4 text-blue-300 flex items-center gap-2">
+                <i class="fas fa-eye"></i> Interpretación de Fenómenos electrostáticos
+                </h3>
+                <div class="space-y-6">
+                <p>
+                La <span class="highlight-text">electrostática</span> se encarga del estudio de las cargas eléctricas en reposo y de las fuerzas que actúan entre ellas. Los conceptos previamente analizados permiten interpretar de manera precisa diversos fenómenos físicos observables tanto en la naturaleza como en la vida cotidiana.
+                </p>
+                <p>
+                En primer lugar, la interacción entre cargas eléctricas se explica a través del <span class="text-blue-300">campo eléctrico</span>. Las cargas generan campos que afectan a otras cargas cercanas, dando lugar a <span class="highlight-text">fuerzas de atracción o repulsión</span> dependiendo del signo de las cargas. Este principio es la base de la ley de Coulomb y constituye el fundamento de toda la teoría electrostática.
+                </p>
+                <p>
+                La <span class="text-blue-300">electricidad estática</span> es un fenómeno que ocurre cuando existe acumulación de cargas en la superficie de un material, generalmente debido a procesos de <span class="highlight-text">fricción o contacto</span>. En estas condiciones, el campo eléctrico generado puede alcanzar valores significativos. Cuando la intensidad del campo supera la rigidez dieléctrica del medio, se produce una descarga eléctrica repentina, lo que explica las pequeñas chispas al tocar objetos metálicos.
+                </p>
+                <p>
+                Un ejemplo de mayor escala son los <span class="highlight-text text-pink-400">rayos</span>. Estas descargas atmosféricas se originan por una gran <span class="text-blue-300">diferencia de potencial</span> entre regiones de una nube o entre una nube y la superficie terrestre. El campo eléctrico generado ioniza el aire, permitiendo el paso de una corriente eléctrica de gran intensidad, ilustrando la relación entre campo, potencial y movimiento de cargas.
+                </p>
+                <p>
+                Otro fenómeno importante es la <span class="text-blue-300">polarización de materiales</span>, que ocurre cuando un campo eléctrico externo provoca la redistribución de cargas dentro de un objeto. Aunque el objeto sea neutro, esta redistribución genera regiones con cargas opuestas que producen fuerzas de atracción, permitiendo que un globo cargado se adhiera a una pared.
+                </p>
+                <p class="bg-blue-900/10 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                Asimismo, estos conceptos permiten interpretar el funcionamiento de dispositivos tecnológicos como <span class="highlight-text">capacitores</span>, sensores eléctricos y sistemas de almacenamiento de energía, donde el control del campo eléctrico y del potencial es fundamental.
+                </p>
+                </div>
+            </div>
+
+            
+
+            <div class="lg:w-1/2 w-full">
+              <div class="relative group">
+                <div
+                  class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"
+                ></div>
+                <img
+                  src="https://concepto.de/wp-content/uploads/2018/10/electroestatica-e1539358908120.jpg"
+                  alt="Representación de Electrostática"
+                  class="relative rounded-xl border border-white/10 shadow-2xl w-full object-cover h-80"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="relacion" class="py-20" data-aos="fade-up">
+        <div class="glass p-8 md:p-12 wiki-content">
+          <h2
+            class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3"
+          >
+            <i class="fas fa-CAMBIAR_ICONO text-xl"></i> Relación entre
+            conceptos
+            <h2 class="text-3xl font-bold mb-8 text-blue-400 flex items-center gap-3">
+              <i class="fas fa-bolt"></i> Fundamentos de la Electricidad
+              </h2>
+              <div class="space-y-6">
+              <p>
+              La <span class="highlight-text">electricidad</span> constituye una de las manifestaciones fundamentales de la física y se relaciona con la presencia, interacción y movimiento de cargas eléctricas. Su comprensión requiere el análisis de conceptos clave como el <span class="text-blue-300">campo eléctrico</span>, la <span class="text-blue-300">intensidad del campo</span>, el <span class="text-blue-300">potencial eléctrico</span> y la <span class="text-blue-300">diferencia de potencial</span>, los cuales permiten describir tanto los efectos de las cargas en reposo (<span class="italic">electrostática</span>) como su comportamiento en sistemas dinámicos.
+              </p>
+              <h3 class="text-xl font-bold mt-10 mb-4 text-blue-300">El Campo Eléctrico</h3>
+              <p>
+              Es una magnitud vectorial que describe la influencia que una carga eléctrica ejerce sobre el espacio que la rodea. Este concepto surge de la necesidad de explicar cómo una carga puede ejercer fuerzas sobre otra sin contacto directo. De esta manera, el campo eléctrico actúa como un <span class="highlight-text">intermediario físico</span> que transmite la interacción eléctrica.
+              </p>
+              <div class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 flex justify-center items-center">
+              <div class="text-2xl text-blue-200 font-serif italic flex items-center gap-2">
+              <b>E</b> =
+              <div class="inline-flex flex-col items-center align-middle">
+              <span class="border-b border-blue-200 px-4"><b>F</b></span>
+              <span class="px-4">q</span>
+              </div>
+              </div>
+              </div>
+              <p>
+              Esta expresión indica que la intensidad del campo eléctrico en un punto es igual a la fuerza ejercida sobre una carga de prueba positiva dividida entre el valor de dicha carga. Por lo tanto, el <span class="highlight-text text-pink-400">campo eléctrico no depende de la carga de prueba</span>, sino de la distribución de cargas que lo generan.
+              </p>
+              <h3 class="text-xl font-bold mt-10 mb-4 text-blue-300">Intensidad del Campo Eléctrico</h3>
+              <p>
+              Permite cuantificar la magnitud de la interacción eléctrica en cada punto del espacio. Su importancia radica en que determina la fuerza que experimentará cualquier carga colocada en ese campo. En sistemas eléctricos reales, la intensidad del campo es un factor determinante para el diseño de dispositivos, ya que <span class="text-blue-200">valores elevados pueden provocar descargas o fallas eléctricas</span>.
+              </p>
+              <h3 class="text-xl font-bold mt-10 mb-4 text-blue-300">Potencial Eléctrico</h3>
+              <p>
+              Es una <span class="highlight-text">magnitud escalar</span> que representa la energía potencial eléctrica por unidad de carga en un punto del campo. A diferencia del campo eléctrico, el potencial no tiene dirección, pero permite analizar la energía asociada a la posición de una carga dentro del campo. Este concepto es fundamental para comprender cómo se almacena y se transforma la energía eléctrica en diferentes sistemas, como <span class="text-blue-300">capacitores o baterías</span>.
+              </p>
+              <h3 class="text-xl font-bold mt-10 mb-4 text-blue-300">Diferencia de Potencial (Voltaje)</h3>
+              <p>
+              Describe el cambio de energía potencial eléctrica entre dos puntos. Esta magnitud es esencial en la electricidad aplicada, ya que es la <span class="highlight-text text-emerald-400">responsable del movimiento de cargas</span> eléctricas a través de conductores.
+              </p>
+              <p>
+              En otras palabras, la corriente eléctrica se produce debido a la existencia de una diferencia de potencial que impulsa a los electrones desde una región de mayor energía hacia una de menor energía.
+              </p>
+              <p>
+                Desde un punto de vista energético, la diferencia de potencial se puede interpretar como el trabajo necesario para desplazar una carga entre dos puntos del campo eléctrico, lo cual conecta directamente con el funcionamiento de dispositivos eléctricos y electrónicos.
+              </p>
+        </div>
+        <div class="overflow-x-auto rounded-xl border border-white/10 shadow-2xl">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-blue-500/20 text-blue-300">
+                <th class="p-4 border-b border-white/10 uppercase text-xs tracking-wider">Concepto</th>
+                <th class="p-4 border-b border-white/10 uppercase text-xs tracking-wider">Naturaleza</th>
+                <th class="p-4 border-b border-white/10 uppercase text-xs tracking-wider">Relación Clave</th>
+                <th class="p-4 border-b border-white/10 uppercase text-xs tracking-wider">Unidad (SI)</th>
+              </tr>
+            </thead>
+            <tbody class="text-slate-300">
+              <tr class="hover:bg-white/5 transition-colors">
+                <td class="p-4 border-b border-white/5 font-bold text-blue-200">Campo Eléctrico</td>
+                <td class="p-4 border-b border-white/5 italic">Vectorial</td>
+                <td class="p-4 border-b border-white/5">Es la zona de influencia creada por una carga. Determina cómo se transmitirá la fuerza a través del espacio sin contacto físico; sin campo, no hay comunicación entre cargas.</td>
+                <td class="p-4 border-b border-white/5">N/C</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors">
+                <td class="p-4 border-b border-white/5 font-bold text-blue-200">Intensidad (E)</td>
+                <td class="p-4 border-b border-white/5 italic">Vectorial</td>
+                <td class="p-4 border-b border-white/5">Define la severidad o fuerza del campo en un punto exacto. En ingeniería, permite calcular si un material aislante fallará (ruptura dieléctrica) ante una carga específica.</td>
+                <td class="p-4 border-b border-white/5">N/C</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors">
+                <td class="p-4 border-b border-white/5 font-bold text-blue-200">Potencial (V)</td>
+                <td class="p-4 border-b border-white/5 italic">Escalar</td>
+                <td class="p-4 border-b border-white/5">Representa el estado energético de un punto. Indica la capacidad de realizar trabajo. Es análogo a la altura en un sistema gravitatorio: cuanta más altura, más energía disponible.</td>
+                <td class="p-4 border-b border-white/5">Voltio (V)</td>
+              </tr>
+              <tr class="hover:bg-white/5 transition-colors">
+                <td class="p-4 border-b border-white/5 font-bold text-blue-200">Diferencia de Potencial (&Delta;V)</td>
+                <td class="p-4 border-b border-white/5 italic">Escalar</td>
+                <td class="p-4 border-b border-white/5">Es el presupuesto energético disponible para mover una carga de A hacia B. Es la verdadera causa del flujo de corriente; sin esta diferencia, los electrones permanecen estáticos.</td>
+                <td class="p-4 border-b border-white/5">Voltio (V)</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -927,20 +1203,120 @@
 
             <div class="space-y-6 text-[11px] text-slate-400 leading-relaxed">
               <p class="pl-4 -indent-4">
-                Serway, R. A., & Jewett, J. W. (2018).
-                <i>Física para ciencias e ingeniería</i> (10a ed., Vol. 2).
-                Cengage Learning.
+                Client challenge. (s. f.).
+                <i>Electric field</i>. Khan Academy.
+                <a
+                  href="https://es.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-field"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://es.khanacademy.org/science/electrical-engineering/ee-electrostatics/ee-electric-force-and-electric-field/a/ee-electric-field</a
+                >
               </p>
 
               <p class="pl-4 -indent-4">
-                Young, H. D., & Freedman, R. A. (2013).
-                <i>Física universitaria con física moderna</i> (13a ed., Vol.
-                2). Pearson Educación.
+                colaboradores de Wikipedia. (2025, 15 septiembre).
+                <i>Campo eléctrico</i>. Wikipedia, la Enciclopedia Libre.
+                <a
+                  href="https://es.wikipedia.org/wiki/Campo_el%C3%A9ctrico"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://es.wikipedia.org/wiki/Campo_el%C3%A9ctrico</a
+                >
               </p>
 
-              <p class="pl-4 -indent-4 italic text-slate-500">
-                [Tu equipo puede seguir agregando aquí sus fuentes siguiendo el
-                mismo formato de etiquetas p]
+              <p class="pl-4 -indent-4">
+                De Guanajuato, U. (s. f.).
+                <i>Clase digital 5. Diferencia de potencial eléctrico</i>.
+                <a
+                  href="https://blogs.ugto.mx/rea/clase-digital-5-diferencia-de-potencial-electrico/"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://blogs.ugto.mx/rea/clase-digital-5-diferencia-de-potencial-electrico/</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Fernández, J. L. (s. f.-a).
+                <i>Concepto de campo eléctrico</i>. FISICALAB.
+                <a
+                  href="https://www.fisicalab.com/apartado/campo-electrico"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://www.fisicalab.com/apartado/campo-electrico</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Fernández, J. L. (s. f.-b).
+                <i>Potencial eléctrico</i>. FISICALAB.
+                <a
+                  href="https://www.fisicalab.com/apartado/potencial-electrico-punto#"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://www.fisicalab.com/apartado/potencial-electrico-punto#</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                <i>Glosario: Campo eléctrico</i>. (s. f.).
+                <a
+                  href="https://ec.europa.eu/health/scientific_committees/opinions_layman/es/campos-electromagneticos/glosario/abc/campo-electrico.htm"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://ec.europa.eu/health/scientific_committees/opinions_layman/es/campos-electromagneticos/glosario/abc/campo-electrico.htm</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Leskow, E. C. (2025a, marzo 28).
+                <i>Campo eléctrico - Concepto, historia, fórmula y ejemplos</i>.
+                Concepto.
+                <a
+                  href="https://concepto.de/campo-electrico/"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://concepto.de/campo-electrico/</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Leskow, E. C. (2025b, noviembre 17).
+                <i>Electrostática - Qué es, fenómenos electrostáticos</i>.
+                Concepto.
+                <a
+                  href="https://concepto.de/electrostatica/?"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://concepto.de/electrostatica/?</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Pérez Montiel, H. (2006).
+                <i>Física General</i>. México: Publicaciones Cultural.
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Porto, J. P., & Gardey, A. (2021, 16 agosto).
+                <i>Potencial eléctrico - Qué es, definición y concepto</i>.
+                Definición.de.
+                <a
+                  href="https://definicion.de/potencial-electrico/"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >https://definicion.de/potencial-electrico/</a
+                >
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Serway, R. A., & Jewett, J. W. (2008).
+                <i>Física para ciencias e ingeniería</i>. Thomson Learning.
+                <a
+                  href="http://bibcyt.ucla.edu.ve/cgi-win/be_alex.exe?Acceso=T070300013588/0&Nombrebd=Bciucla"
+                  class="text-blue-400/60 hover:text-blue-300 transition-colors"
+                  target="_blank"
+                  >http://bibcyt.ucla.edu.ve/cgi-win/be_alex.exe?Acceso=T070300013588/0&Nombrebd=Bciucla</a
+                >
               </p>
             </div>
           </div>
@@ -949,13 +1325,13 @@
     </main>
 
     <footer class="py-12 border-t border-white/10 text-center lg:ml-64">
-      <div class="flex justify-center gap-6 mb-6 text-slate-500">
-        <i class="fab fa-github hover:text-white cursor-pointer"></i>
-        <i class="fab fa-google-drive hover:text-white cursor-pointer"></i>
-        <i class="fas fa-graduation-cap hover:text-white cursor-pointer"></i>
+      <div class="flex justify-center gap-8 mb-8 text-slate-500">
+        <a href="https://github.com/LuisithoIsNotADev611" target="_blank" title="GitHub de Luisitho" class="hover:text-white transition-all transform hover:scale-110">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
       </div>
       <p class="text-slate-600 text-[10px] uppercase tracking-[5px]">
-        TecNM - Cintalapa, Chiapas
+        | MEDLEY TEAM © Derechos Reservados 2026 |
       </p>
     </footer>
 
