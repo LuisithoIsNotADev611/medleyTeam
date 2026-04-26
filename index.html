@@ -7,13 +7,19 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       :root {
-        --accent: #3b82f6;
-        --accent-2: #a855f7;
+        --accent: #3b82f6; /* Color azul predeterminado */
+        --accent-2: #a855f7; /* Color morado predeterminado */
       }
 
       body {
@@ -21,32 +27,31 @@
         background-color: #030303;
         color: #ffffff;
         overflow-x: hidden;
-        transition: background-color 0.5s ease; /* Para el easter egg */
+        /* COMENTARIO: Esta transición hace que el cambio de color sea suave */
+        transition: background-color 0.5s ease, color 0.5s ease;
       }
 
-      /* Estilo para el modo Easter Egg */
-      body.hacker-mode {
-        background-color: #001a00;
-        color: #00ff00;
-      }
-      
-      body.hacker-mode .highlight-text, 
-      body.hacker-mode .text-blue-500,
-      body.hacker-mode .text-slate-500 {
-        color: #00ff00 !important;
+      .font-title {
+        font-family: "Space Grotesk", sans-serif;
       }
 
-      .font-title { font-family: "Space Grotesk", sans-serif; }
-
+      /* Efecto de malla de fondo */
       .grid-bg {
-        background-image: linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                          linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+        background-image: linear-gradient(
+            rgba(59, 130, 246, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
         background-size: 50px 50px;
         position: fixed;
-        width: 100%; height: 100%;
+        width: 100%;
+        height: 100%;
         z-index: -1;
+        /* COMENTARIO: Transición para la opacidad de la malla */
+        transition: opacity 0.5s ease;
       }
 
+      /* Tarjetas de Proyectos */
       .project-card {
         background: rgba(255, 255, 255, 0.02);
         backdrop-filter: blur(10px);
@@ -57,106 +62,245 @@
 
       .project-card:hover {
         transform: scale(1.05);
+        /* COMENTARIO: Usamos la variable --accent para el borde en hover */
         border-color: var(--accent);
         box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
         background: rgba(59, 130, 246, 0.05);
       }
 
-      .glow-button { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+      .glow-button {
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+        /* COMENTARIO: Usamos --accent para el fondo del botón */
+        background-color: var(--accent) !important;
+      }
+
+      .glow-button:hover {
+        background-color: var(--accent-2) !important;
+      }
+
+      /* COMENTARIO: Clases personalizadas para los degradados dinámicos */
+      .dynamic-gradient {
+        background-image: linear-gradient(
+          to right,
+          var(--accent),
+          var(--accent-2)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .dynamic-text-accent {
+        color: var(--accent) !important;
+      }
     </style>
   </head>
   <body>
-    <div class="grid-bg"></div>
+    <div class="grid-bg" id="grid-bg"></div>
 
     <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
       <div class="flex flex-col">
         <a href="index.html" class="group">
-          <h1 class="font-title text-xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:opacity-80">
+          <h1
+            class="font-title text-xl font-bold tracking-tighter dynamic-gradient transition-all duration-300 group-hover:opacity-80"
+          >
             MEDLEY TEAM
           </h1>
-          <p class="text-[10px] text-slate-500 tracking-[0.3em] font-bold uppercase -mt-1">
+          <p
+            class="text-[10px] text-slate-500 tracking-[0.3em] font-bold uppercase -mt-1"
+          >
             Ing. Informática - 2F
           </p>
         </a>
       </div>
       <div class="space-x-6 text-sm text-slate-400">
-        <a href="https://github.com/LuisithoIsNotADev611" target="_blank" title="Desarrollador Principal: Luis" class="hover:text-white transition">
-          <i class="fab fa-github"></i>
-        </a>
+        <a
+          href="https://github.com/luisithoisnotadev611"
+          target="_blank"
+          class="hover:text-white transition"
+          ><i class="fab fa-github"></i
+        ></a>
         <a href="#" class="hover:text-white transition">Acerca de</a>
       </div>
     </nav>
 
     <header class="py-20 text-center px-6" data-aos="zoom-in">
       <h2 class="font-title text-5xl md:text-8xl font-bold mb-6 tracking-tight">
-        Explora el <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">Conocimiento</span>
+        Explora el
+        <span class="dynamic-gradient">Conocimiento</span>
       </h2>
       <p class="text-slate-500 max-w-2xl mx-auto text-lg md:text-xl">
-        Somos MEDLEY TEAM, un grupo de estudiantes de Ingeniería Informática dedicados a la investigación y el desarrollo. Nuestro nombre nace de las iniciales de nuestros fundadores y nuestra visión mixta de la ingeniería. ؛ଓ
+        Somos MEDLEY TEAM, un grupo de estudiantes de la carrera de Ingeniería
+        Informática que nos dedicamos a hacer tareas e investigar. Por el
+        momento somos 6 desarrolladores de la web. El nombre no es casualidad,
+        proviene de las iniciales de los nombres de los 6 desarrolladores que
+        comenzaron con el proyecto; además, su significado es mixto, haciendo
+        referencia a que esta página se utilizara para fines mixtos de nuestra
+        ingeniería. Gracias por visitarnos.
+        <span class="dynamic-text-accent">؛ଓ</span>
+      </p>
+      <p></p>
+      <p class="text-slate-500 max-w-2xl mx-auto text-lg md:text-xl">
+        Si sacas información de aquí, no olvides citarnos correctamente, te lo
+        agradeceremos mucho.
       </p>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 pb-40">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="project-card p-8 rounded-[2rem]" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+        <div
+          class="project-card p-8 rounded-[2rem]"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6 dynamic-text-accent"
+          >
             <i class="fas fa-bolt text-2xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-3 font-title">Electromagnetismo</h3>
           <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-            Reporte detallado sobre Campo Eléctrico, Potencial y Fenómenos Electrostáticos.
+            Reporte detallado sobre Campo Eléctrico, Potencial y Diferencia de
+            Potencial.
           </p>
-          <a href="electromagnetismo.html" class="inline-block px-6 py-2 bg-blue-600 rounded-full text-sm font-bold glow-button hover:bg-blue-500 transition">Ver Wiki</a>
+          <a
+            href="electromagnetismo.html"
+            class="inline-block px-6 py-2 rounded-full text-sm font-bold glow-button text-white transition"
+            >Ver Wiki</a
+          >
         </div>
 
-        <div class="project-card p-8 rounded-[2rem] border-dashed border-slate-800" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-12 h-12 bg-gray-500/20 rounded-xl flex items-center justify-center mb-6 text-gray-400">
+        <div
+          class="project-card p-8 rounded-[2rem] border-dashed border-slate-800"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div
+            class="w-12 h-12 bg-gray-500/20 rounded-xl flex items-center justify-center mb-6 text-gray-400"
+          >
             <i class="fas fa-code text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">Próximo tema</h3>
-          <p class="text-slate-600 text-sm mb-6">Sección reservada para proyectos de programación y bases de datos.</p>
-          <span class="text-xs text-slate-700 font-bold tracking-widest uppercase">Próximamente</span>
+          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">
+            Próximo tema
+          </h3>
+          <p class="text-slate-600 text-sm mb-6">
+            Sección reservada para proyectos posteriores a este.
+          </p>
+          <span
+            class="text-xs text-slate-700 font-bold tracking-widest uppercase"
+            >Próximamente</span
+          >
         </div>
 
-        <div class="project-card p-8 rounded-[2rem] border-dashed border-slate-800" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-12 h-12 bg-gray-500/20 rounded-xl flex items-center justify-center mb-6 text-gray-400">
+        <div
+          class="project-card p-8 rounded-[2rem] border-dashed border-slate-800"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div
+            class="w-12 h-12 bg-gray-500/20 rounded-xl flex items-center justify-center mb-6 text-gray-400"
+          >
             <i class="fas fa-microchip text-2xl"></i>
           </div>
-          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">Hardware</h3>
-          <p class="text-slate-600 text-sm mb-6">Investigaciones sobre SBC (Raspberry Pi, Orange Pi) y Arduino.</p>
-          <span class="text-xs text-slate-700 font-bold tracking-widest uppercase">En Desarrollo</span>
+          <h3 class="text-2xl font-bold mb-3 font-title text-slate-500">
+            Próximo Tema
+          </h3>
+          <p class="text-slate-600 text-sm mb-6">Más proyectos llegando :p</p>
+          <span
+            class="text-xs text-slate-700 font-bold tracking-widest uppercase"
+            >Próximamente</span
+          >
         </div>
       </div>
     </main>
 
-    <footer class="py-10 border-t border-white/5 text-center text-slate-600 text-xs">
-      <p>DESARROLLADO POR <span class="text-blue-500 font-bold">MEDLEY TEAM</span></p>
-      <p class="mt-1">
-        <span class="hover:text-white transition">Mónica</span> | 
-        <span class="hover:text-white transition">Elaia</span> | 
-        <span class="hover:text-white transition">David</span> | 
-        <span class="hover:text-white transition">Luis</span> | 
-        <span class="hover:text-white transition">Emireth</span> | 
-        <span class="hover:text-white transition">Yizel</span>
+    <footer
+      class="py-10 border-t border-white/5 text-center text-slate-600 text-xs"
+    >
+      <p>
+        DESARROLLADO POR EQUIPO 2F |
+        <span class="dynamic-text-accent font-bold">MEDLEY TEAM</span>
       </p>
-      <p class="mt-2 tracking-widest uppercase">© 2026 - Ingeniería en Informática ITSC</p>
+      <p id="integrantes">
+        <span class="dynamic-text-accent">M</span>ónica |
+        <span class="dynamic-text-accent">E</span>laia |
+        <span class="dynamic-text-accent">D</span>avid |
+        <span class="dynamic-text-accent">L</span>uis |
+        <span class="dynamic-text-accent">E</span>mireth |
+        <span class="dynamic-text-accent">Y</span>izel
+      </p>
+      <p class="mt-4 tracking-widest opacity-30 italic">
+        Pista: Presiona la inicial de un integrante...
+      </p>
+      <p class="mt-2 tracking-widest uppercase">
+        © 2026 - INGENIERÍA EN INFORMÁTICA
+      </p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 1000 });
 
-      // LOGICA DEL EASTER EGG
-      document.addEventListener('keydown', function(event) {
-  // Verificamos si la tecla presionada es 'L' o 'l'
-  if (event.key === 'l' || event.key === 'L') {
-    // Alternamos la clase hacker-mode en el body
-    document.body.classList.toggle('hacker-mode');
-    
-    // Un pequeño mensaje en la consola para los curiosos
-    console.log("ᓚᐎᐃᓯ ᑌᐃᒦᐅ: ᐳᐅ ᐊᒪᐄ ᐳᐊᒪᑳᐃᐅᓂ, ᔭ, ᓯᐄᓚᐄ ᓂᐄ ᓯᐅ ᒦᐄᒪᐄ ᑌᐅᒦᐃᕆᐳᐅᓚᐄ");
-  }
-});
+      /* ======================================================
+         LÓGICA DEL EASTER EGG DINÁMICO (MODO INTEGRANTE)
+         ======================================================
+      */
+
+      // COMENTARIO: Definimos los colores para cada integrante (Degradado: Color1 a Color2)
+      const coloresPorIntegrante = {
+        m: { accent: "#3dd4f7", accent2: "#5cf6b0" }, // Mónica
+        e: { accent: "#a855f7", accent2: "#cc42ec" }, // Elaia/Emireth
+        d: { accent: "#f97316", accent2: "#eab308" }, // David
+        l: { accent: "#3791f5", accent2: "#ec4899" }, // Luis
+        y: { accent: "#ec4899", accent2: "#f482fa" }, // Yizel
+      };
+
+      // COMENTARIO: Guardamos los colores predeterminados para poder volver a ellos
+      const coloresDefault = { accent: "#3b82f6", accent2: "#a855f7" };
+
+      // COMENTARIO: Variable para rastrear qué integrante está activo (null si ninguno)
+      let integranteActivo = null;
+
+      // COMENTARIO: Escuchamos los eventos de teclado en todo el documento
+      document.addEventListener("keydown", function (event) {
+        // Convertimos la tecla a minúsculas para manejar 'M' y 'm' por igual
+        const tecla = event.key.toLowerCase();
+
+        // Si la tecla presionada corresponde a un integrante
+        if (coloresPorIntegrante[tecla]) {
+          // Si presionamos la misma tecla del integrante activo, desactivamos el modo
+          if (integranteActivo === tecla) {
+            aplicarColores(coloresDefault);
+            integranteActivo = null;
+            console.log("Modo Medley TEAM restablecido.");
+          } else {
+            // Si no, activamos los colores del nuevo integrante
+            aplicarColores(coloresPorIntegrante[tecla]);
+            integranteActivo = tecla;
+            console.log(
+              `¡Easter Egg activado! Modo ${tecla.toUpperCase()} activo.`
+            );
+          }
+        }
+      });
+
+      // COMENTARIO: Función que actualiza las variables CSS para cambiar los colores
+      function aplicarColores(colores) {
+        // Actualizamos las variables CSS en la raíz del documento
+        document.documentElement.style.setProperty("--accent", colores.accent);
+        document.documentElement.style.setProperty(
+          "--accent-2",
+          colores.accent2
+        );
+
+        // COMENTARIO: Opcional - Pequeño cambio visual en la malla de fondo
+        const gridBg = document.getElementById("grid-bg");
+        if (colores !== coloresDefault) {
+          gridBg.style.opacity = "0.3"; // Más visible en modo easter egg
+        } else {
+          gridBg.style.opacity = "1"; // Opacidad normal
+        }
+      }
     </script>
   </body>
 </html>
