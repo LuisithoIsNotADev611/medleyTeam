@@ -89,50 +89,84 @@
       class="wiki-sidebar fixed left-0 top-0 h-screen w-64 hidden lg:flex flex-col p-6 z-50"
     >
       <div class="mb-10">
-        <h2
-          class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500"
-        >
-          MEDLEY TEAM
-        </h2>
-        <p class="text-[10px] text-slate-500 tracking-widest">
-          ING. INFORMÁTICA - 2F
-        </p>
+        <a href="index.html" class="group block no-underline">
+          <h2
+            class="font-title text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:opacity-80"
+          >
+            MEDLEY TEAM
+          </h2>
+          <p
+            class="text-[10px] text-slate-500 tracking-[0.3em] font-bold uppercase -mt-1"
+          >
+            ING. INFORMÁTICA - 2F
+          </p>
+        </a>
       </div>
 
       <nav class="space-y-4 text-sm">
-        <p class="text-slate-500 text-xs uppercase font-bold">Contenido</p>
+        <p class="text-slate-500 text-xs uppercase font-bold">
+          Contenido del Reporte
+        </p>
+
         <a
           href="#inicio"
           class="block hover:text-blue-400 transition flex items-center gap-2"
-          ><i class="fas fa-home w-4"></i> Inicio</a
         >
+          <i class="fas fa-home w-4"></i> Inicio
+        </a>
+
         <a
           href="#campo"
           class="block hover:text-blue-400 transition flex items-center gap-2"
-          ><i class="fas fa-bolt w-4"></i> Campo Eléctrico</a
         >
+          <i class="fas fa-bolt w-4"></i> Campo Eléctrico
+        </a>
+
+        <a
+          href="#intensidad"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+        >
+          <i class="fas fa-rss w-4"></i> Intensidad de Campo
+        </a>
+
         <a
           href="#potencial"
           class="block hover:text-blue-400 transition flex items-center gap-2"
-          ><i class="fas fa-wave-square w-4"></i> Potencial Eléctrico</a
         >
-        <a
-          href="#experimental"
-          class="block hover:text-blue-400 transition flex items-center gap-2"
-          ><i class="fas fa-flask w-4"></i> Evidencia Exp.</a
-        >
+          <i class="fas fa-wave-square w-4"></i> Potencial Eléctrico
+        </a>
 
-        <p class="text-slate-500 text-xs uppercase font-bold pt-6">Recursos</p>
+        <a
+          href="#fenomenos"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+        >
+          <i class="fas fa-atom w-4"></i> Fenómenos Electrostáticos
+        </a>
+
+        <a
+          href="#relacion"
+          class="block hover:text-blue-400 transition flex items-center gap-2"
+        >
+          <i class="fas fa-plug w-4"></i> Relación de Conceptos
+        </a>
+
+        <p class="text-slate-500 text-xs uppercase font-bold pt-6">
+          Recursos y Fuentes
+        </p>
+
         <a
           href="#multimedia"
           class="block hover:text-pink-400 transition flex items-center gap-2"
-          ><i class="fas fa-play-circle w-4"></i> Multimedia</a
         >
+          <i class="fas fa-play-circle w-4"></i> Multimedia
+        </a>
+
         <a
           href="#referencias"
           class="block hover:text-emerald-400 transition flex items-center gap-2"
-          ><i class="fas fa-link w-4"></i> Hipervínculos</a
         >
+          <i class="fas fa-quote-right w-4"></i> Referencias APA
+        </a>
       </nav>
     </aside>
 
@@ -147,7 +181,7 @@
             >REPORTE TÉCNICO - ABRIL 2026</span
           >
           <h1 class="text-5xl md:text-7xl font-bold mb-6">
-            Potencial <span class="text-blue-500 italic">Eléctrico</span>
+            Electro<span class="text-blue-500 italic">magnetismo</span>
           </h1>
           <p class="text-slate-400 text-lg max-w-2xl">
             Documentación colaborativa sobre la diferencia de potencial y su
@@ -451,48 +485,463 @@
         </div>
       </section>
 
+      <section id="intensidad" class="py-20" data-aos="fade-up">
+        <div class="glass p-8 md:p-12 wiki-content">
+          <h2
+            class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3"
+          >
+            <i class="fas fa-CAMBIAR_ICONO text-xl"></i> Intensidad de campo
+            eléctrico
+          </h2>
+
+          <div class="space-y-6">
+            <p>
+              La
+              <span class="highlight-text">intensidad del campo eléctrico</span>
+              es una magnitud vectorial que representa la fuerza eléctrica
+              <b>F</b> actuando sobre una carga determinada en una cantidad
+              precisa de
+              <span class="highlight-text">Newton/Coulomb (N/C)</span>.
+            </p>
+            <p>
+              Esta magnitud suele denominarse sencillamente
+              <span class="italic text-slate-400">“campo eléctrico”</span>,
+              debido a que el campo en sí mismo no puede ser medido
+              directamente, sino a través de su
+              <span class="highlight-text">efecto</span> sobre una carga
+              determinada.
+            </p>
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+            >
+              <div class="text-2xl text-blue-200 font-serif italic">
+                <b>F</b> = q ⋅ <b>E</b>
+              </div>
+            </div>
+            <p>
+              Al utilizar esta fórmula, debemos tomar en cuenta el
+              comportamiento según el signo de la carga:
+            </p>
+            <ul class="space-y-4 pl-4">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-plus-circle text-blue-400 mt-1"></i>
+                <span
+                  >Si la carga es
+                  <span class="text-blue-300 font-bold">positiva (q > 0)</span>,
+                  la fuerza eléctrica tendrá el mismo signo que el campo y q se
+                  moverá en el
+                  <span class="highlight-text">mismo sentido</span>.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-minus-circle text-pink-400 mt-1"></i>
+                <span
+                  >Si la carga es
+                  <span class="text-pink-300 font-bold">negativa (q < 0)</span>,
+                  ocurrirá lo contrario: la fuerza y el campo tendrán sentidos
+                  opuestos.</span
+                >
+              </li>
+            </ul>
+            <p>
+              Otra característica fundamental es que la intensidad del campo
+              <span class="highlight-text"
+                >no depende de la carga de prueba</span
+              >
+              utilizada, sino únicamente de la carga que genera el campo:
+            </p>
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 flex justify-center items-center"
+            >
+              <div
+                class="text-2xl text-blue-200 font-serif italic flex items-center gap-2"
+              >
+                <b>E</b> =
+                <div class="inline-flex flex-col items-center align-middle">
+                  <span class="border-b border-blue-200 px-2"><b>F</b></span>
+                  <span class="px-2">q</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3
+            class="text-xl font-bold mt-10 mb-4 text-blue-300 flex items-center gap-2"
+          >
+            <i class="fas fa-dot-circle"></i> Intensidad del campo eléctrico
+            creado por una carga puntual
+          </h3>
+
+          <div class="space-y-6">
+            <p>
+              La
+              <span class="highlight-text"
+                >intensidad del campo eléctrico creado por una carga
+                puntual</span
+              >
+              es igual a la constante de Coulomb por la carga que genera el
+              campo eléctrico, dividido por el cuadrado de la distancia entre la
+              carga y el punto en el que se calcula la intensidad.
+            </p>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 flex justify-center items-center"
+            >
+              <div
+                class="text-2xl text-blue-200 font-serif italic flex items-center gap-2"
+              >
+                E = K &sdot;
+                <div class="inline-flex flex-col items-center align-middle">
+                  <span class="border-b border-blue-200 px-4">q</span>
+                  <span class="px-4">r<sup>2</sup></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+              <div
+                class="p-4 bg-white/5 rounded-xl border border-white/5 flex items-start gap-3"
+              >
+                <span class="text-blue-400 font-serif text-lg"
+                  >&epsilon;<sub>0</sub></span
+                >
+                <p class="text-sm">
+                  <span class="font-bold text-slate-200"
+                    >Permitividad eléctrica del vacío:</span
+                  >
+                  constante fundamental del SI.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-white/5 rounded-xl border border-white/5 flex items-start gap-3"
+              >
+                <span class="text-blue-400 font-serif text-lg"
+                  >q<sub>1</sub>, q<sub>2</sub></span
+                >
+                <p class="text-sm">
+                  <span class="font-bold text-slate-200">Cargas:</span>
+                  partículas o cuerpos que interactúan en el sistema.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-white/5 rounded-xl border border-white/5 flex items-start gap-3"
+              >
+                <span class="text-blue-400 font-serif text-lg"
+                  >r<sub>12</sub></span
+                >
+                <p class="text-sm">
+                  <span class="font-bold text-slate-200">Distancia:</span>
+                  separación lineal entre ambas cargas.
+                </p>
+              </div>
+              <div
+                class="p-4 bg-white/5 rounded-xl border border-white/5 flex items-start gap-3"
+              >
+                <span class="text-blue-400 font-serif text-lg"><b>r̂</b></span>
+                <p class="text-sm">
+                  <span class="font-bold text-slate-200">Vector unitario:</span>
+                  indica la dirección de la fuerza eléctrica.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3
+            class="text-xl font-bold mt-12 mb-4 text-emerald-400 flex items-center gap-2"
+          >
+            <i class="fas fa-users-rays"></i> Intensidad del campo eléctrico
+            creado por varias cargas puntuales
+          </h3>
+
+          <div class="space-y-6">
+            <p>
+              Cuando tenemos un sistema formado por varias cargas puntuales,
+              cada una genera un campo eléctrico independiente. El campo
+              eléctrico resultante cumple con el
+              <span class="highlight-text">principio de superposición</span>.
+            </p>
+
+            <p
+              class="bg-emerald-900/10 border-l-4 border-emerald-500 p-4 rounded-r-lg italic"
+            >
+              La intensidad del campo eléctrico creado por varias cargas
+              puntuales es igual a la
+              <span class="text-emerald-300 font-bold">suma vectorial</span> de
+              la intensidad del campo eléctrico generado por cada carga por
+              separado.
+            </p>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 flex justify-center items-center"
+            >
+              <div
+                class="text-2xl text-emerald-200 font-serif italic flex items-center gap-2"
+              >
+                <b>E</b><sub>total</sub> = <b>E</b><sub>1</sub> + <b>E</b
+                ><sub>2</sub> + ... + <b>E</b><sub>n</sub>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="potencial" class="py-20" data-aos="fade-up">
+        <div class="glass p-8 md:p-12 wiki-content">
+          <h2
+            class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3"
+          >
+            <i class="fas fa-CAMBIAR_ICONO text-xl"></i> Potencial Eléctrico
+          </h2>
+
+          <div class="space-y-6">
+            <h2
+              class="text-3xl font-bold mb-6 text-blue-400 flex items-center gap-3"
+            >
+              <i class="fas fa-wave-square text-xl"></i> Potencial Eléctrico
+            </h2>
+
+            <div class="space-y-6">
+              <p>
+                Se conoce como
+                <span class="highlight-text">potencial eléctrico</span> al
+                trabajo que un campo electrostático tiene que llevar a cabo para
+                movilizar una
+                <span class="highlight-text">carga positiva unitaria</span> de
+                un punto hacia otro. Puede decirse, por lo tanto, que el trabajo
+                a concretar por una fuerza externa para mover una carga desde un
+                punto referente hasta otro es el potencial eléctrico.
+              </p>
+
+              <p>
+                Cabe mencionar que no se debe confundir este concepto con el de
+                <span class="highlight-text">energía potencial eléctrica</span>,
+                aunque ambos estén relacionados, ya que este último es la
+                energía que tiene un sistema de cargas eléctricas de acuerdo con
+                su posición.
+              </p>
+
+              <p>
+                El potencial eléctrico en un punto del espacio es una
+                <span class="highlight-text">magnitud escalar</span> que nos
+                permite obtener una medida del campo eléctrico en dicho punto, a
+                través de la energía potencial electrostática que adquiriría una
+                carga si la situásemos en él.
+              </p>
+
+              <div
+                class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+              >
+                <p class="text-2xl text-blue-200">V = Ep / q'</p>
+              </div>
+
+              <p>Donde los componentes son:</p>
+              <ul class="list-disc list-inside space-y-2 pl-4 text-slate-300">
+                <li>
+                  <span class="text-blue-300">V:</span> Es el potencial
+                  eléctrico en un punto. Su unidad en el S.I. es el
+                  <span class="highlight-text">julio por culombio (J/C)</span>,
+                  que en honor a Alessandro Volta recibe el nombre de
+                  <span class="highlight-text">Voltio</span>.
+                </li>
+                <li>
+                  <span class="text-blue-300">Ep:</span> Es la energía potencial
+                  eléctrica que adquiere una carga testigo positiva q' al
+                  situarla en ese punto.
+                </li>
+              </ul>
+
+              <p>
+                De esta forma, si conocemos el valor del potencial eléctrico
+                <span class="highlight-text">V</span> en un punto, podemos
+                determinar que la energía potencial eléctrica de una carga
+                <span class="highlight-text">q</span> situada en él es:
+              </p>
+
+              <div
+                class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+              >
+                <p class="text-2xl text-blue-200">Eq = V · q</p>
+              </div>
+
+              <p
+                class="mt-4 italic text-slate-400 border-l-4 border-blue-500 pl-4"
+              >
+                Nota: El potencial eléctrico describe la energía por unidad de
+                carga, permitiendo analizar el campo sin depender del valor de
+                la carga que se introduzca después.
+              </p>
+            </div>
+          </div>
+          <div class="mt-12 space-y-6">
+            <h3
+              class="text-2xl font-bold mb-6 text-blue-300 flex items-center gap-3"
+            >
+              <i class="fas fa-bullseye text-lg"></i> Potencial Eléctrico en
+              Cargas Puntuales
+            </h3>
+
+            <p>
+              Es el trabajo que hace el campo eléctrico para traer una
+              <span class="highlight-text">carga de prueba positiva de 1C</span>
+              desde el infinito hasta ese punto, que va dividido entre esa
+              carga. Es decir, una única carga
+              <span class="highlight-text">q</span> es capaz de crear un campo
+              eléctrico a su alrededor.
+            </p>
+
+            <p>
+              Si en dicho campo introducimos una
+              <span class="highlight-text">carga testigo q'</span>, entonces,
+              atendiendo a la definición de energía potencial eléctrica de dos
+              cargas puntuales:
+            </p>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+            >
+              <p class="text-xl text-blue-100">
+                V = Ep / q' = (K · q · q' / r) / q' => V = K · q / r
+              </p>
+            </div>
+
+            <p>
+              En palabras más simples, se dice que es la
+              <span class="highlight-text text-blue-300"
+                >"energía eléctrica por Coulomb"</span
+              >
+              que hay en un punto del espacio debido a una carga.
+            </p>
+
+            <p>
+              El potencial eléctrico del campo eléctrico creado por una
+              <span class="highlight-text">carga puntual q</span> se obtiene
+              mediante:
+            </p>
+
+            <div
+              class="bg-slate-800/40 p-6 rounded-xl border border-white/5 my-6 text-center"
+            >
+              <p class="text-2xl text-blue-200 font-mono">V = K · q / r</p>
+            </div>
+
+            <p class="font-bold text-slate-300">Donde:</p>
+            <ul class="list-disc list-inside space-y-2 pl-4 text-slate-300">
+              <li>
+                <span class="text-blue-300">V:</span> Potencial eléctrico
+                (Voltios [V]).
+              </li>
+              <li>
+                <span class="text-blue-300">K:</span> Constante de Coulomb (N·m²
+                / C²).
+              </li>
+              <li>
+                <span class="text-blue-300">q:</span> Carga puntual fuente
+                (Coulomb [C]).
+              </li>
+              <li>
+                <span class="text-blue-300">r:</span> Distancia entre la carga y
+                el punto de medición (metros [m]).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section id="multimedia" class="py-20" data-aos="fade-right">
         <div class="grid md:grid-cols-3 gap-8">
           <div class="md:col-span-2 glass p-6">
-            <h3 class="text-xl font-bold mb-4 italic">
-              Demostración Experimental
+            <h3 class="text-xl font-bold mb-6 italic text-blue-400">
+              <i class="fas fa-play-circle mr-2"></i>Recursos Audiovisuales
             </h3>
-            <div class="video-container">
-              <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/zyludObkGEk"
+                    title="Campo Eléctrico"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p
+                  class="text-[10px] text-slate-500 uppercase font-bold text-center"
+                >
+                  Conceptos de Campo Eléctrico
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/zryX5cQXjWQ"
+                    title="Intensidad de campo"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p
+                  class="text-[10px] text-slate-500 uppercase font-bold text-center"
+                >
+                  Intensidad de Campo
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/Hp8btHq8bjI"
+                    title="Diferencia de Potencial"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p
+                  class="text-[10px] text-slate-500 uppercase font-bold text-center"
+                >
+                  ¿Qué es el Voltaje?
+                </p>
+              </div>
+
+              <div class="space-y-2">
+                <div class="video-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/zryX5cQXjWQ"
+                    title="Material Extra"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <p
+                  class="text-[10px] text-slate-500 uppercase font-bold text-center"
+                >
+                  Material Complementario
+                </p>
+              </div>
             </div>
           </div>
-          <div id="referencias" class="glass p-6 space-y-6">
-            <h3 class="text-xl font-bold mb-4">Recursos Wiki</h3>
-            <div class="space-y-4">
-              <a
-                href="https://phet.colorado.edu/es/simulations/charges-and-fields"
-                target="_blank"
-                class="block p-4 bg-white/5 rounded-xl hover:bg-blue-500/20 transition border border-white/5"
-              >
-                <h4 class="text-blue-400 font-bold text-sm">
-                  Simulador PhET
-                  <i class="fas fa-external-link-alt text-[10px]"></i>
-                </h4>
-                <p class="text-[10px] text-slate-400">
-                  Herramienta para visualizar campos en tiempo real.
-                </p>
-              </a>
-              <a
-                href="#"
-                class="block p-4 bg-white/5 rounded-xl hover:bg-purple-500/20 transition border border-white/5"
-              >
-                <h4 class="text-purple-400 font-bold text-sm">
-                  Formulario PDF
-                  <i class="fas fa-file-download text-[10px]"></i>
-                </h4>
-                <p class="text-[10px] text-slate-400">
-                  Descarga las fórmulas del equipo 2F.
-                </p>
-              </a>
+
+          <div id="referencias" class="glass p-6">
+            <h3 class="text-xl font-bold mb-6 text-emerald-400">
+              <i class="fas fa-quote-right mr-2"></i>Referencias APA
+            </h3>
+
+            <div class="space-y-6 text-[11px] text-slate-400 leading-relaxed">
+              <p class="pl-4 -indent-4">
+                Serway, R. A., & Jewett, J. W. (2018).
+                <i>Física para ciencias e ingeniería</i> (10a ed., Vol. 2).
+                Cengage Learning.
+              </p>
+
+              <p class="pl-4 -indent-4">
+                Young, H. D., & Freedman, R. A. (2013).
+                <i>Física universitaria con física moderna</i> (13a ed., Vol.
+                2). Pearson Educación.
+              </p>
+
+              <p class="pl-4 -indent-4 italic text-slate-500">
+                [Tu equipo puede seguir agregando aquí sus fuentes siguiendo el
+                mismo formato de etiquetas p]
+              </p>
             </div>
           </div>
         </div>
